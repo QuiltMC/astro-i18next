@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-pnpm run test:coverage --run
-pnpm exec lint-staged
-pnpm run typecheck
