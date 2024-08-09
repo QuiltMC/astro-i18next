@@ -101,7 +101,6 @@ export default (options?: AstroI18nextOptions): AstroIntegration => {
             "page-ssr",
             serverImports + i18nextInitServer + astroI18nextInit
           );
-          console.log(serverImports + i18nextInitServer + astroI18nextInit)
         }
 
         if (astroI18nextConfig.load?.includes("client")) {
@@ -144,7 +143,6 @@ export default (options?: AstroI18nextOptions): AstroIntegration => {
 const i18nextScriptBuilder = (config: InitOptions, plugins: Plugins) => {
   let imports = `import i18next from "i18next";`;
   let i18nextInit = "i18next";
-  console.log(`Plugins passed to script builder: ${plugins}`)
 
   if (Object.keys(plugins).length > 0) {
     for (const key of Object.keys(plugins)) {
@@ -159,8 +157,6 @@ const i18nextScriptBuilder = (config: InitOptions, plugins: Plugins) => {
   }
 
   i18nextInit += `.init(${deeplyStringifyObject(config)});`;
-  console.log(`ASTRO I18N IMPORTS: ${imports}`)
-
   return { imports, i18nextInit };
 };
 
