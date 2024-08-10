@@ -7,7 +7,7 @@
     "test:coverage": "pnpm test -- --coverage",
     "preview": "astro preview",
     "build": "./build.cjs && pnpm run typecheck:emit",
-    "pack": "pnpm run build && pnpm pack",
+    "prepack": "./build.cjs && pnpm run typecheck:emit",
     "lint": "eslint --ext js,cjs,ts .",
     "prettier": "prettier --check --ignore-path .prettierignore .",
     "prettier:fix": "prettier --write --ignore-path .prettierignore .",
