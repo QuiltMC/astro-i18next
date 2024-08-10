@@ -14,7 +14,6 @@
     "typecheck": "tsc --noEmit",
     "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
     "commit": "cz",
-    "prepare": "is-ci || husky install",
     "semantic-release": "semantic-release"
   },
   "repository": {
